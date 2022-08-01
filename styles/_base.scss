@@ -1,0 +1,10 @@
+$font-stack: 'Open Sans', sans-serif;
+$primary-bg-color: #d3d3d3;
+
+body {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font: 100% $font-stack;
+    outline: 0;
+  }
