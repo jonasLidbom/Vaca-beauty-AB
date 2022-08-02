@@ -192,22 +192,16 @@ header {
 /*Footer sektion*/
 footer {
     text-align: left;
-    margin-bottom: 6%;
-    .footer-logo {
-        float: left;
-        padding-left: 10%;
-    }
+    margin: 2% 10%;
     .footer-links {
         float: right;
-        width: 51%;
+        width: 80%;
+        text-align: right;
     }
     a {
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 10px;
-    }
-    #last-link {
-        padding-right: 0;
     }
 }
 
