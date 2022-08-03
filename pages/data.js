@@ -29,5 +29,36 @@ export const data = [
     description:
       "A powerful Superblend of wheat-based Hyaluronic Acid to plump and Vitamin C to help firm, tighten, smooth and improve skin appearance.",
     price: "€149.00"
+  },
+  {
+    id: 5,
+    img: "images/image-1.jpg",
+    name: "Radiance Cream",
+    description: "A powerful Superblend of wheat-based Hyaluronic Acid to plump and Vitamin C to help firm, tighten, smooth and improve skin appearance.",
+    price: "€89.00"
+  },
+  {
+    id: 6,
+    img: "images/image-3.jpg",
+    name: "Radiance Cream",
+    description:
+      "A powerful Superblend of wheat-based Hyaluronic Acid to plump and Vitamin C to help firm, tighten, smooth and improve skin appearance.",
+    price: "€99.00"
+  },
+  {
+    id: 7,
+    img: "images/image-4.jpg",
+    name: "Radiance Cream",
+    description:
+      "A powerful Superblend of wheat-based Hyaluronic Acid to plump and Vitamin C to help firm, tighten, smooth and improve skin appearance.",
+    price: "€149.00"
+  },
+  {
+    id: 8,
+    img: "images/image-5.jpg",
+    name: "Radiance Cream",
+    description:
+      "A powerful Superblend of wheat-based Hyaluronic Acid to plump and Vitamin C to help firm, tighten, smooth and improve skin appearance.",
+    price: "€149.00"
   }
 ];

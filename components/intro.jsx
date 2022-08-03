@@ -2,8 +2,8 @@ export default function Intro(){
     return (
         <>
         {/* Bakgrundsbild samt företagsintroduktion.*/}
-        <sektion class="introduction">
-            <div class="bg-image">
+        <sektion className={"introduction"}>
+            <div className={"bg-image"}>
                 <h1>Reinventing the world of beauty</h1>
                 <h3>We believe that through creativity, we are
                     able to develop timeless products, both meaningful and

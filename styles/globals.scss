@@ -1,8 +1,6 @@
 @use 'base';
 
-header {
-    margin-top: 1%;
-}
+
 
 /* Bakgrundsbild samt företagsintroduktion */
 .introduction{
@@ -119,6 +117,7 @@ header {
     
     /* Pagination */
     .pagination a {
+        
         border-radius: 5px;
         color: black;
         font-size: 150%;
@@ -202,6 +201,7 @@ footer {
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 10px;
+        padding: 5%;
     }
 }
 

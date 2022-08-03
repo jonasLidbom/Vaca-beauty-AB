@@ -4,13 +4,15 @@ export default function Header() {
   return (
     <>
     <header>
+      <div className={"container-fluid"}>
       {/* Logga */}
       <Image
         src="/Vaca-logo.svg"
         height={50}
         width={100}
       />
-      </header>
+      </div>
+    </header>
     </>
   );
 }

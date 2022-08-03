@@ -8,9 +8,9 @@ export default function Footer() {
           src="/Vaca-logo.svg"
           height={40}
           width={100}
-          class="image"
+          className={"image"}
         />
-      <div class="footer-links">
+      <div className={"footer-links"}>
         <a>Privacy Policy</a>
         <a>Privacy Policy</a>
         <a>Privacy Policy</a>
