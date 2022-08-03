@@ -38,6 +38,7 @@ function Products() {
               />
             )).slice(0, 4)}
           </dl>
+          
           {/* Pagination */}
           <div className={"pagination"} id="list">
             <div className={"products-section"} id="pagination">

@@ -7,6 +7,10 @@
   outline: 0;
 }
 
+header {
+  margin: 1% 0 1% 0;
+}
+
 /* Bakgrundsbild samt företagsintroduktion */
 .introduction .bg-image {
   background: rgba(0, 0, 0, 0.3) url("/images/image-2.jpg");
@@ -41,10 +45,14 @@
   height: 100%;
   padding: 1% 5% 4% 5%;
 }
+#products-section .products-bg h1 {
+  margin: 2% 0 1% 0;
+  font-weight: bold;
+}
 #products-section .products-buttons {
   width: 90px;
   height: 40px;
-  margin: 0px 10px 25px;
+  margin: 0 0.5% 2%;
   font-size: large;
   font-weight: bold;
   border: 0;
@@ -64,14 +72,15 @@
 }
 #products-section .block {
   margin: auto;
+  margin-bottom: 20px;
   padding-bottom: 2%;
   font-size: 150%;
   max-width: 31.25rem;
-  text-align: left;
   transition: all 100ms ease-in-out;
 }
 #products-section .block dt {
   margin-top: 3%;
+  text-align: left;
 }
 #products-section .product-image {
   position: relative;
@@ -106,10 +115,9 @@
 #products-section .pagination a {
   border-radius: 5px;
   color: black;
-  font-size: 150%;
-  font-weight: 550;
+  font-size: 125%;
+  font-weight: 650;
   padding: 8px 20px;
-  margin-bottom: 2%;
   text-decoration: none;
   transition: background-color 0.3s;
 }
@@ -134,13 +142,14 @@
 .contact-section .contact-bg h1 {
   color: white;
   padding-top: 9%;
-  margin-bottom: 0;
+  margin-bottom: 2%;
   font-size: 2rem;
+  font-weight: bold;
   letter-spacing: 0.15rem;
-  margin-top: 0;
 }
 .contact-section .contact-bg h3 {
   font-size: 1.5rem;
+  font-weight: 500;
   color: white;
   padding: 0 25% 1.5% 25%;
   letter-spacing: 0.15rem;
