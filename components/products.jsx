@@ -1,17 +1,31 @@
-// import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {data} from "../pages/data.js";
 import Product from "./product.jsx";
-import { useEffect, useState } from "react";
-
+import Pagination from "./pagination.jsx";
 
 
 function Products() {
     const [posts, setPosts] = useState(data);
-    const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(3);
+    const [postsPerPage] = useState(3);
 
-    console.log(posts);
+
+    // Get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const nextPage = () => setCurrentPage(currentPage + 1);
+    const previousPage = () => setCurrentPage(currentPage - 1);
+    
+    const pageNumbers = [];
+
+    for(let i = 1; i <=Math.ceil(posts.length / postsPerPage); i++){
+        pageNumbers.push(i);
+    }
+
     
     return (
       <>
@@ -28,7 +42,7 @@ function Products() {
 
           {/* Lista-produkter */}
           <dl className={"products-data"}>
-            {data.map((data) => (
+            {currentPosts.map((data) => (
               <Product
                 key={data.id}
                 img={data.img}
@@ -36,19 +50,37 @@ function Products() {
                 description={data.description}
                 price={data.price}
               />
-            )).slice(0, 4)}
+            ))}
           </dl>
-          
           {/* Pagination */}
-          <div className={"pagination"} id="list">
-            <div className={"products-section"} id="pagination">
-                <a href="#" id="btn_prev">❮</a>
-                <a href="#" className={"active"}>1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#products-section" id="btn_next">❯</a>
-            </div>
-          </div>
+
+          <nav>
+              <ul className="pagination justify-content-center">
+                  <li className="page-item">
+                      <a onClick={previousPage} className={`page-link ${currentPage === 1 ? "disabled" : ""}`} aria-label="Previous">
+                          <span aria-hidden="true">❮</span>
+                      </a>
+                  </li>
+                      {pageNumbers.map(number => (
+                          <li key={number} class="page-item">
+                              <a onClick={() => paginate(number)} className={`page-link ${currentPage === number ? "active" : ""}`} id={number}>
+                                  {number}
+                            
+                              </a>
+                          </li>
+                      ))}
+                  <li className="page-item">
+                      <a onClick={nextPage} className={`page-link ${currentPage === pageNumbers.length ? "disabled" : ""}`} aria-label="Next">
+                          <span aria-hidden="true">❯</span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+    
+          {/* <Pagination
+            postsPerPage = {postsPerPage} totalPosts={posts.length} paginate={paginate} 
+          /> */}
+
         </div>
       </sektion>
       </>

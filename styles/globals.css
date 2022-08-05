@@ -23,7 +23,7 @@ header {
 .introduction h1 {
   color: white;
   padding-top: 9%;
-  margin-bottom: 0;
+  margin-bottom: 2%;
 }
 .introduction h3 {
   font-size: 1.5rem;
@@ -37,8 +37,6 @@ header {
   /* Produkter */
   /* Produktbilder samt animationer */
   /* Pagination */
-  /* Aktiv/nuvarande länk */
-  /* Mouse-over länk */
 }
 #products-section .products-bg {
   background-color: #d3d3d3;
@@ -46,13 +44,13 @@ header {
   padding: 1% 5% 4% 5%;
 }
 #products-section .products-bg h1 {
-  margin: 2% 0 1% 0;
+  margin: 2% 0 2% 0;
   font-weight: bold;
 }
 #products-section .products-buttons {
   width: 90px;
   height: 40px;
-  margin: 0 0.5% 2%;
+  margin: 0 0.5% 4%;
   font-size: large;
   font-weight: bold;
   border: 0;
@@ -112,8 +110,14 @@ header {
   text-align: left;
   margin: 70% 20% 5% 5%;
 }
+#products-section .pagination li {
+  margin: 0;
+  cursor: pointer;
+}
 #products-section .pagination a {
   border-radius: 5px;
+  background-color: transparent;
+  border: 0;
   color: black;
   font-size: 125%;
   font-weight: 650;
@@ -121,10 +125,11 @@ header {
   text-decoration: none;
   transition: background-color 0.3s;
 }
-#products-section .pagination a.active {
+#products-section .pagination a:hover {
   background-color: white;
+  cursor: pointer;
 }
-#products-section .pagination a:hover:not(.active) {
+#products-section .pagination .active {
   background-color: white;
 }
 
